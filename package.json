@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d public",
-    "build-sass": "node-sass sass/app.scss src/css/app.css",
-    "watch-sass": "node-sass -w sass/app.scss src/css/app.css",
+    "build-sass": "node-sass sass/app.scss public/css/app.css",
+    "watch-sass": "node-sass -w sass/app.scss public/css/app.css",
     "start": "npm run build && npm run dev && npm run open",
     "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\""
   },
