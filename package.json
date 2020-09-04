@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist",
-    "build-sass": "node-sass dist/public/sass/app.scss dist/public/css/app.css",
-    "watch-sass": "node-sass -w dist/public/sass/app.scss dist/public/css/app.css",
+    "deploy": "gh-pages -d public",
+    "build-sass": "node-sass sass/app.scss src/css/app.css",
+    "watch-sass": "node-sass -w sass/app.scss src/css/app.css",
     "start": "npm run build && npm run dev && npm run open",
     "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\""
   },
