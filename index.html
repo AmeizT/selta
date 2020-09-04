@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selta Digital Studio</title>
-    <link rel="stylesheet" href="css/app.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/index.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../src/css/app.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../src/css/index.css" type="text/css" media="screen">
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="navbar">
@@ -22,13 +22,20 @@
     </nav>
 
     <header class="hero" role="banner" aria-label="hero">
-        <h1>Concept + Create</h1>
+        <div class="container">
+            <div class="row">
+                <div class="item-group">
+                    <h1>Speaking <span class="light-text">Brilliance</span> into Existence</h1>
+                    <span>Think - Create - Bring to Life</span>
+                </div>
+            </div>
+        </div>
     </header>
 
     <div id="drawer">
         <button id="xBtn" type="button" role="button" onclick="document.getElementById('drawer').classList.remove('active');">Close</button>
     </div>
 
-    <script src="js/app.js" type="text/javascript"></script>
+    <script src="../src/js/app.js" type="text/javascript"></script>
 </body>
 </html>
