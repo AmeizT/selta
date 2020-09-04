@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selta Digital Studio</title>
     <link rel="stylesheet" href="css/app.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/index.css" type="text/css" media="screen">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas tenetur beatae commodi distinctio autem exercitationem vel, veniam sunt ex dicta quibusdam, maiores sed nisi facilis. Cupiditate soluta autem error.</p>
+    <nav class="navbar" role="navigation" aria-label="navbar">
+        <div class="container">
+            <div class="nav-col"></div>
+            <div class="nav-col"></div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas tenetur beatae commodi distinctio autem
-        exercitationem vel, veniam sunt ex dicta quibusdam, maiores sed nisi facilis. Cupiditate soluta autem error.</p>
+            <div class="nav-col">
+                <button id="hamburger" type="button" role="button" tabindex="0" onclick="document.getElementById('drawer').classList.add('active');" aria-label="hamburger" aria-expanded="true">
+                    <span id="burger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" role="banner" aria-label="hero">
+        <h1>Concept + Create</h1>
+    </header>
+
+    <div id="drawer">
+        <button id="xBtn" type="button" role="button" onclick="document.getElementById('drawer').classList.remove('active');">Close</button>
+    </div>
 
     <script src="js/app.js" type="text/javascript"></script>
 </body>

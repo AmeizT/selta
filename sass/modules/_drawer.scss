@@ -1,0 +1,15 @@
+#drawer {
+   width: 0%;
+   height: 100vh;
+   display: block;
+   position: fixed;
+   top: 0;
+   z-index: 9999;
+   visibility: hidden;
+   background: var(--snow);
+
+   &.active {
+       width: 100%;
+       visibility: visible;
+   }
+}
