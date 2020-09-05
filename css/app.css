@@ -1,6 +1,6 @@
 :root {
   background: #f0f0f0;
-  --night: #212829;
+  --night: #16181c;
   --snow: #ffffff; }
 
 * {
@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Proxima Nova', 'Roboto', sans-serif; }
+  font-family: 'Heebo', 'Roboto', 'Open Sans', 'Segoe UI', sans-serif; }
 
 svg {
   pointer-events: none; }
@@ -24,17 +24,38 @@ h1 {
 p, span, pre {
   line-height: 1.75rem; }
 
-.hero {
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none; }
+  input:focus {
+    box-shadow: none;
+    outline: none; }
+
+.content {
   width: 100%;
   height: 100vh;
   display: grid;
+  grid-template-columns: repeat(5, 100%);
+  grid-auto-flow: column;
   position: relative;
-  place-items: center;
-  background: inherit; }
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-y: contain;
+  overflow: scroll hidden; }
+  .content .section {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    position: relative;
+    place-items: center;
+    scroll-snap-align: start; }
 
 .container {
   width: 100%;
-  height: auto;
+  height: auto; }
+
+.hero {
   padding: 2rem; }
 
 .row {
@@ -46,7 +67,7 @@ p, span, pre {
   display: flex;
   justify-content: center;
   overflow-y: auto;
-  color: #668396;
+  color: #a5a5a5;
   background: var(--night); }
   .site-footer .sm-text {
     text-transform: uppercase;
@@ -63,13 +84,16 @@ p, span, pre {
   z-index: 999;
   background: inherit; }
   .navbar .container {
-    width: 100%;
+    width: calc(100% - 1rem);
     height: auto;
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 1fr; }
 
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   border: none;
   cursor: pointer; }
@@ -83,6 +107,36 @@ button {
   background: var(--night);
   color: var(--snow); }
 
+.clear_btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  background: none; }
+  .clear_btn .clear_icon {
+    width: 30px;
+    height: 2px;
+    display: block;
+    position: relative;
+    background: transparent; }
+    .clear_btn .clear_icon::after, .clear_btn .clear_icon::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      transform-origin: center;
+      background: var(--night); }
+    .clear_btn .clear_icon::after {
+      transform: rotate(45deg); }
+    .clear_btn .clear_icon::before {
+      transform: rotate(-45deg); }
+
+.est_btn {
+  padding: 0.5rem 2rem;
+  color: var(--snow);
+  border-radius: 50px;
+  background: var(--night); }
+
 #drawer {
   width: 0%;
   height: 100vh;
@@ -95,6 +149,30 @@ button {
   #drawer.active {
     width: 100%;
     visibility: visible; }
+  #drawer .drawer-nav {
+    width: calc(100% - 1rem);
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+
+.error {
+  font-size: 0.75rem;
+  color: #ee5d5d; }
+
+.estimate_form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 0.5rem 0.5rem;
+  background: var(--snow);
+  border: 1px solid #dbdbdb;
+  border-radius: 50px; }
+
+.form_ctr {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: transparent; }
 
 #hamburger {
   width: 2rem;
@@ -120,3 +198,14 @@ button {
       top: 4px; }
     #hamburger #burger::before {
       top: -4px; }
+
+.scrolla {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  place-items: center;
+  border-radius: 50px;
+  background: var(--night); }
