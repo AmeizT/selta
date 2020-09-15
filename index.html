@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/app.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/index.css" type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-    <script src="./js/app.js" type="module" defer></script>
-    <script src="./js/modules/index.js" type="module" defer></script>
+    <script src="../public/js/app.js" type="module" defer></script>
+    <script src="../public/js/modules/index.js" type="module" defer></script>
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="navbar">
@@ -36,14 +36,17 @@
         </div>
     </nav>
 
-    <nav class="sidebar" style="display: none;">
-        <ul class="sidebar-nav">
-            <span class="pointer" onclick="currSec(1)"></span>
-            <span class="pointer" onclick="currSec(2)"></span>
-            <span class="pointer" onclick="currSec(3)"></span>
-            <span class="pointer" onclick="currSec(4)"></span>
-            <span class="pointer" onclick="currSec(5)"></span>
-        </ul>
+    
+
+    <nav class="toolbar" role="navigation" aria-label="toolbar">
+        <div class="wrapper">
+            <ul class="toolbar-nav">
+                <span class="pointer" onclick="currSec(1)"></span>
+                <span class="pointer" onclick="currSec(2)"></span>
+                <span class="pointer" onclick="currSec(3)"></span>
+                <span class="pointer" onclick="currSec(4)"></span>
+            </ul>
+        </div>
     </nav>
 
     <main class="content" role="main" aria-label="content">
@@ -56,7 +59,7 @@
                 <div class="row">
                     <h1>Beautifying the web</h1>
                     <p>We're a multidisciplinary design and development agency working remotely to bring concepts to life and build stunning mobile & web apps.</p>
-                    <button class="section-button" type="button" role="button" tabindex="0" onclick="window.location.href='works.html';">Showreel</button>
+                    <button class="section-button" type="button" role="button" tabindex="0" onclick="window.location.href='works.html';">Open Portfolio</button>
                 </div>
             </div>
         </div>
@@ -71,10 +74,6 @@
             <div class="container">
                 <h1>company</h1>
             </div>
-        </div>
-
-        <div class="section" id="cta">
-            <h1>cta</h1>
         </div>
 
         <div class="section site-footer" id="contacts" aria-label="site footer">
