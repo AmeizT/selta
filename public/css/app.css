@@ -61,7 +61,7 @@ a {
   .content .section {
     width: 100%;
     height: 100vh;
-    display: block;
+    display: none;
     position: relative;
     place-items: center; }
   .content .container {
