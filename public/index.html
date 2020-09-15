@@ -3,87 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Beyond Brilliance</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/app.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/index.css" type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <script src="../public/js/app.js" type="module" defer></script>
+    <script src="../public/js/modules/index.js" type="module" defer></script>
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="navbar">
         <div class="container">
+            <div class="nav-col">
+                
+            </div>
             <div class="nav-col"></div>
-            <div class="nav-col"></div>
+            <div class="nav-col">
+                <ul class="nav_menu">
+                    <li class="nav_menu_list">
+                        <a href="#" class="nav_menu_link">Works</a>
+                    
+                </ul>
+            </div>
 
             <div class="nav-col">
-                <button id="hamburger" type="button" role="button" tabindex="0" onclick="document.getElementById('drawer').classList.add('active');" aria-label="hamburger" aria-expanded="true">
+                <button id="hamburger" type="button" role="button" tabindex="0" onclick="draw(event)" aria-label="hamburger" aria-expanded="true">
                     <span id="burger"></span>
                 </button>
             </div>
         </div>
     </nav>
 
+    <nav class="sidebar" style="display: none;">
+        <ul class="sidebar-nav">
+            <span class="pointer" onclick="currSec(1)"></span>
+            <span class="pointer" onclick="currSec(2)"></span>
+            <span class="pointer" onclick="currSec(3)"></span>
+            <span class="pointer" onclick="currSec(4)"></span>
+            <span class="pointer" onclick="currSec(5)"></span>
+        </ul>
+    </nav>
+
     <main class="content" role="main" aria-label="content">
-        <div class="section hero" role="banner" aria-label="hero">
+        <div class="section" id="hero" role="banner" aria-label="hero">
+            <div class="section-label">
+                <span>Selta</span>
+            </div>
+
             <div class="container">
                 <div class="row">
-                    <div class="item-group">
-                        <h1>Creative Beyond Brilliance</h1>
-                        <span>Think - Create - Bring to Life</span>
-                    </div>
-                </div>
-
-                <div class="scrolla">
-                    <button class="scro_btn" type="button" role="button" tabindex="0" onclick="window.location.href='#estimator';">
-                        
-                    </button>
+                    <h1>Beautifying the web</h1>
+                    <p>We're a multidisciplinary design and development agency working remotely to bring concepts to life and build stunning mobile & web apps.</p>
+                    <button class="section-button" type="button" role="button" tabindex="0" onclick="window.location.href='works.html';">Let's Amaze You</button>
                 </div>
             </div>
         </div>
 
-        <div class="section estimator" id="estimator" aria-label="project estimator">
-            <div class="container" style="padding: 0 1.75rem;">
-                <div class="row">
-                    <div class="item-group">
-                        <h3>Project estimator</h3>
-                        <form class="estimate_form" novalidate role="form">
-                            <input class="form_ctr" type="text" id="esty" placeholder="What's your budget?" spellcheck="false" autocomplete="off" autofocus aria-label="esty">
-                            <button class="est_btn" type="button" role="button" aria-label="estimate button" onclick="estimate()">Estimate</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="item-group">
-                        <span class="error"></span>
-                    </div>
-                </div>
+        <div class="section" id="works">
+            <div class="container">
+                <h1>Works</h1>
             </div>
         </div>
 
-        <div class="section site-footer" aria-label="site footer">
-            <div class="container" style="padding: 0 2rem;">
-                <div class="row">
-                    <div class="item-group">
-                        <h2 style="color: var(--snow);">Beyond Brilliance</h2>
-                    </div>
-                </div>
+        <div class="section" id="company">
+            <div class="container">
+                <h1>company</h1>
+            </div>
+        </div>
 
-                <div class="row">
-                    <div class="item-group">
-                        <span>Selta Digital Studio is a multidisciplinary design and development agency working remotely to bring concepts to life and build stunning mobile & web apps.</span>
-                    </div>
-                </div>
+        <div class="section" id="cta">
+            <h1>cta</h1>
+        </div>
 
-                <div class="row" style="padding-top: 1rem;">
-                    <div class="item-group">
-                        <span class="sm-text" style="font-size: 14px;">Talk to us</span>
-                    </div>
-
-                    <div class="item-group">
-                        <span>+267 76 503 344</span>
-                        <span>seltadigitalstudio@gmail.com</span>
-                    </div>
-                </div>
+        <div class="section site-footer" id="contacts" aria-label="site footer">
+            <div class="container">
+                <h1>footer</h1>
             </div>
         </div>
     </main>
@@ -98,6 +94,12 @@
         </div>
     </div>
 
-    <script src="../public/js/app.js" type="text/javascript"></script>
+    
+
+    <!-- <script type="module">
+        import { index } from '../public/js/modules/index.js';
+        index;
+    </script> -->   
+    
 </body>
 </html>

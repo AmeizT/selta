@@ -1,11 +1,10 @@
-estimate = () => {
-    
-    let estimator = document.getElementById('esty');
-    let err = document.querySelector('.error');
-    
-    if (isNaN(estimator.value)) {
-        err.innerHTML = 'Type a valid number';
-    } else {
-        err.innerHTML = '';
-    }
-}
+import { draw, currSec, showSlides } from './modules/index.js';
+window.draw = draw; window.currSec = currSec; window.showSlides = showSlides;
+
+
+
+
+
+
+
+
