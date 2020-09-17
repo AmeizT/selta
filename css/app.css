@@ -22,7 +22,8 @@ h1 {
   font-weight: 700; }
 
 p, span, pre {
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  font-family: 'Heebo'; }
 
 input {
   -webkit-appearance: none;
