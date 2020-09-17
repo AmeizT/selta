@@ -15,5 +15,13 @@ export function draw(e) {
 }
 
 
+let age = 25;
+age += 10;
+console.log(age += 5);
+
+
+let person = 'he\'s a man';
+console.log(person);
+
 
 
