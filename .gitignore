@@ -2,3 +2,4 @@ node_modules
 sass
 .env
 README.md
+src
