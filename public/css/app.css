@@ -7,8 +7,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Sofia Pro', 'Heebo', 'Roboto', 'Open Sans', 'Segoe UI', sans-serif;
-  font-size: 15px; }
+  font-family: 'Proxima Nova', 'Heebo', 'Roboto', 'Open Sans', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 400; }
 
 div, h1, h2, h3, h4, h5 {
   margin: 0;
@@ -74,19 +75,6 @@ a {
       align-items: center;
       position: absolute;
       bottom: 0; }
-  .content .watermark {
-    width: 3.75rem;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    position: absolute;
-    left: 1rem;
-    color: #fafafa;
-    z-index: 9; }
-    .content .watermark .watermark-text {
-      line-height: 6rem;
-      font-size: 6.75rem;
-      font-weight: 900; }
 
 .container {
   width: 100%;
@@ -97,6 +85,20 @@ a {
   place-items: center;
   background: initial;
   padding: 3.75rem 2rem 0; }
+
+.watermark {
+  width: 3.75rem;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 1rem;
+  color: #fafafa;
+  z-index: 9; }
+  .watermark .watermark-text {
+    line-height: 6rem;
+    font-size: 6.75rem;
+    font-weight: 900; }
 
 .nopad {
   padding: 0; }
@@ -132,20 +134,17 @@ a {
   z-index: 9999;
   background: inherit; }
   .navbar .container {
-    width: calc(100% - 4rem);
+    width: calc(100% - 2rem);
     height: auto;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 70% 15%;
     grid-template-rows: 1fr; }
   .navbar .nav-col {
     width: 100%;
     display: flex;
     justify-content: center; }
-    .navbar .nav-col:nth-child(2), .navbar .nav-col:nth-child(3) {
+    .navbar .nav-col:nth-child(3) {
       display: none; }
-    .navbar .nav-col:nth-child(4) {
-      display: flex;
-      justify-content: flex-end; }
 
 .site-content {
   width: 100%;
@@ -303,14 +302,29 @@ button {
   #drawer.active {
     width: 100%;
     visibility: visible; }
-  #drawer.active #burger::after {
-    background: var(--snow); }
-  #drawer .drawer-nav {
-    width: calc(100% - 1rem);
-    height: 3.75rem;
+  #drawer .container {
+    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: center; }
+  #drawer .drawer-row {
+    position: absolute;
+    z-index: 99;
+    color: #3c424d; }
+  #drawer .drawer-nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-end; }
+  #drawer .drawer-nav-item {
+    margin: 0.25rem 0; }
+  #drawer .drawer-link {
+    color: #3c424d;
+    font-size: 2rem; }
+  #drawer .drawer-contacts {
+    margin-top: 2rem; }
 
 .error {
   font-size: 0.75rem;
@@ -339,11 +353,10 @@ button {
   justify-content: center;
   background: none; }
   #hamburger #burger {
-    width: 30px;
+    width: 28px;
     height: 2px;
     display: block;
     position: absolute;
-    left: 0;
     background: transparent;
     transform-origin: center; }
     #hamburger #burger::after, #hamburger #burger::before {
@@ -352,18 +365,16 @@ button {
       height: 100%;
       display: block;
       position: absolute;
-      left: 0;
       background: var(--night);
       transform-origin: center;
       transition: all 200ms ease-in-out; }
     #hamburger #burger::after {
-      top: 5px; }
+      top: 4px; }
     #hamburger #burger::before {
-      top: -5px; }
+      top: -4px; }
     #hamburger #burger.active::after, #hamburger #burger.active::before {
-      width: 24px;
       top: 0;
-      background: var(--snow); }
+      background: var(--seltablue); }
     #hamburger #burger.active::after {
       transform: rotate(-45deg); }
     #hamburger #burger.active::before {
