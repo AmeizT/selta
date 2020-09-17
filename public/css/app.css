@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Sofia Pro', 'Heebo', 'Roboto', 'Open Sans', 'Segoe UI', sans-serif;
+  font-family: 'Proxima Nova', 'Heebo', 'Roboto', 'Open Sans', 'Segoe UI', sans-serif;
   font-size: 15px; }
 
 div, h1, h2, h3, h4, h5 {
@@ -18,8 +18,7 @@ svg {
   pointer-events: none; }
 
 h1 {
-  line-height: 3.5rem;
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 700; }
 
 p, span, pre {
@@ -75,7 +74,7 @@ a {
       align-items: center;
       position: absolute;
       bottom: 0; }
-  .content .section-label {
+  .content .watermark {
     width: 3.75rem;
     height: 100vh;
     display: grid;
@@ -84,11 +83,31 @@ a {
     left: 1rem;
     color: #fafafa;
     z-index: 9; }
-    .content .section-label span {
-      writing-mode: vertical-lr;
-      text-orientation: upright;
-      font-size: 5.25rem;
+    .content .watermark .watermark-text {
+      line-height: 6rem;
+      font-size: 6.75rem;
       font-weight: 900; }
+
+.container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  position: relative;
+  margin: 0 auto;
+  place-items: center;
+  background: initial;
+  padding: 3.75rem 2rem 0; }
+
+.nopad {
+  padding: 0; }
+
+.a-pos {
+  position: absolute;
+  z-index: 99;
+  padding: 0 1.375rem; }
+
+.t-md {
+  font-size: 18px; }
 
 .site-footer {
   width: 100%;
@@ -110,7 +129,7 @@ a {
   position: fixed;
   place-items: center;
   top: 0;
-  z-index: 999;
+  z-index: 9999;
   background: inherit; }
   .navbar .container {
     width: calc(100% - 4rem);
@@ -152,16 +171,6 @@ a {
       align-items: center;
       position: absolute;
       bottom: 0; }
-
-.container {
-  width: 100%;
-  height: auto; }
-
-.hero {
-  padding: 2rem; }
-
-.row {
-  margin: 1rem 0; }
 
 .sidebar {
   width: 6rem;
@@ -288,7 +297,7 @@ button {
   display: block;
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 999;
   visibility: hidden;
   background: var(--night); }
   #drawer.active {
