@@ -1,0 +1,9 @@
+{
+    "name": "selta-app",
+    "short_name": "selta",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#16161c",
+    "background_color": "#ffffff",
+    "orientation": "portrait-primary"
+}
